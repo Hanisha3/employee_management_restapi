@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    password: password
+    url: jdbc:mysql://localhost:3306/
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+---
+spring:
+  config:
+    activate:
+      on-profile: 'test'
+message: "welcome to the application, this test environment"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: 'prod'
+message: "welcome to the application, this prod environment"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: 'qa'
+message: "welcome to the application, this qa environment"
